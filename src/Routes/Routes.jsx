@@ -8,6 +8,7 @@ import MyArtCraftList from "../Layout/MyArtCraftList/MyArtCraftList";
 import Register from "../Components/Register/Register";
 import Login from "../Components/Login/Login";
 import ProtectedRoutes from "../Components/ProtectedRoutes/ProtectedRoutes";
+import Details from "../Layout/Art&Craft/Details";
 
 export const router = createBrowserRouter([
   {
@@ -52,6 +53,12 @@ export const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login />,
+      },
+      {
+        path: '/craft/:id',
+        element: <Details />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/craft/${params.id}`),
       },
     ],
   },

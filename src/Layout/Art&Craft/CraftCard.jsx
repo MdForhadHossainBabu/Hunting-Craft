@@ -4,7 +4,7 @@ import { IoStarHalfOutline } from 'react-icons/io5';
 
 const CraftCard = ({ craft }) => {
  
- const {
+ const {_id,
    craftName,
    quantity,
    price,
@@ -37,7 +37,7 @@ const CraftCard = ({ craft }) => {
            </div>
          </div>
          <div className="flex items-center justify-center my-6">
-           <Link className=" rounded-md hover:scale-105 duration-500 px-28 py-1 font-extrabold font-display bg-rose-500 text-white">
+           <Link to={`/craft/${_id}`} className=" rounded-md hover:scale-105 duration-500 px-28 py-1 font-extrabold font-display bg-rose-500 text-white">
              Details
            </Link>
          </div>
