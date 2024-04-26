@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 // import './styles.css';
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 
 
 const Banner = () => {
@@ -20,6 +20,10 @@ const Banner = () => {
     <>
       <Swiper
         effect={'coverflow'}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={'auto'}
@@ -31,7 +35,7 @@ const Banner = () => {
           slideShadows: true,
         }}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
