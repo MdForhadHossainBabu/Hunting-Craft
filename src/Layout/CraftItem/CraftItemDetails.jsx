@@ -6,13 +6,9 @@ const CraftItemDetails = ({ craftItemData }) => {
   const {
     _id,
     craftName,
-    description,
-    email,
     photo,
     price,
-    processing_time,
     stockStatus,
-    userName,
     rating,
   } = craftItemData;
   return (

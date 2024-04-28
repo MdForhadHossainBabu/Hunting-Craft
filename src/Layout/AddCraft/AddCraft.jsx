@@ -34,24 +34,24 @@ const AddCraft = () => {
 
   // send backend 
   fetch('http://localhost:5000/craftItem', {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-    },
-    body: JSON.stringify(newCraft),
+   method: 'POST', 
+   headers: {
+    'content-type': 'application/json'
+   },
+   body:JSON.stringify(newCraft)
   })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-      if (data.insertedId) {
-        Swal.fire({
-          title: 'success',
-          text: 'Craft Added Successfully',
-          icon: 'success',
-          confirmButtonText: 'Cool',
-        });
-      }
-    });
+   .then(res => res.json())
+   .then(data => {
+    // console.log(data);
+    if (data.insertedId) {
+     Swal.fire({
+       title: 'success',
+       text: 'Craft Added Successfully',
+       icon: 'success',
+       confirmButtonText: 'Cool',
+     });
+    }
+  })
  
  }
  return (

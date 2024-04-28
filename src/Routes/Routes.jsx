@@ -34,9 +34,7 @@ export const router = createBrowserRouter([
 
       {
         path: '/myCraftList',
-        element: (
-            <MyArtCraftList />
-        ),
+        element: <MyArtCraftList />,
       },
 
       {
@@ -61,9 +59,10 @@ export const router = createBrowserRouter([
       },
       {
         path: '/updateCraft/:id',
-        element:<UpdateCraft/>,
-      }
-
+        element: <UpdateCraft />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/craftItem/${params.id}`),
+      },
     ],
   },
 ]);

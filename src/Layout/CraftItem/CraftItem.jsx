@@ -18,7 +18,7 @@ const CraftItem = () => {
 
 
   return (
-    <div>
+    <div className="mt-12 space-y-4">
       <h2 className="text-5xl font-bold font-display text-center">Crafts </h2>
       <p className="text-xl font-display text-center lg:px-52">
         Art and craft provide a platform for the artists for expressing their
