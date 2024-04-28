@@ -21,8 +21,13 @@ const MyArtCraftList = () => {
        <title>Art & Craft || My Art & Craft List</title>
      </Helmet>
      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-8xl mx-auto p-12 gap-12">
-       {myCart.map((cartInfo) => (
-         <SingleCartInfo key={cartInfo._id} cartInfo={cartInfo} />
+       {myCart.map(cartInfo => (
+         <SingleCartInfo
+           key={cartInfo._id}
+           setMyCart={setMyCart}
+           myCart={myCart}
+           cartInfo={cartInfo}
+         />
        ))}
      </div>
    </div>

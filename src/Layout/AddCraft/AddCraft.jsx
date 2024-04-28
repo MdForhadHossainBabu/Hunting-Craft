@@ -14,7 +14,8 @@ const AddCraft = () => {
   const stockStatus = form.stock_status.value;
   const userName = form.userName.value;
   const email = form.email.value;
-  const photo = form.photo.value;
+   const photo = form.photo.value;
+   const category = form.category.value;
   const rating = form.rating.value;
   
   const newCraft = {
@@ -28,6 +29,7 @@ const AddCraft = () => {
     userName,
     email,
     photo,
+    category,
   };
   // console.log(newCraft);
   // console.log(newCraft);

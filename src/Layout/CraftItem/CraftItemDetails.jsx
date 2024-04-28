@@ -34,7 +34,7 @@ const CraftItemDetails = ({ craftItemData }) => {
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <p className='font-bold font-display opacity-80'>Price : ${price}</p>
         <div className="card-actions  flex items-center justify-center">
-          <Link to={`/craft/${_id}`}  className='px-36 rounded-lg text-white bg-rose-500 py-2'> View Detail</Link>
+          <Link to={`/craft/${_id}`}  className='lg:px-36 px-24 rounded-lg text-white bg-rose-500 lg:py-2 py-1'> View Detail</Link>
         </div>
       </div>
     </div>
