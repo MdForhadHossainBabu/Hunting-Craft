@@ -7,8 +7,9 @@ import AddCraft from "../Layout/AddCraft/AddCraft";
 import MyArtCraftList from "../Layout/MyArtCraftList/MyArtCraftList";
 import Register from "../Components/Register/Register";
 import Login from "../Components/Login/Login";
-import ProtectedRoutes from "../Components/ProtectedRoutes/ProtectedRoutes";
+// import ProtectedRoutes from "../Components/ProtectedRoutes/ProtectedRoutes";
 import Details from "../Layout/Art&Craft/Details";
+import UpdateCraft from "../Layout/MyArtCraftList/UpdateCraft";
 
 export const router = createBrowserRouter([
   {
@@ -34,14 +35,12 @@ export const router = createBrowserRouter([
       {
         path: '/myCraftList',
         element: (
-          <ProtectedRoutes>
             <MyArtCraftList />
-          </ProtectedRoutes>
         ),
       },
 
       {
-        path: '/myCraftList',
+        path: '/myCraftList/:id',
         element: <MyArtCraftList />,
       },
 
@@ -60,6 +59,11 @@ export const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/craft/${params.id}`),
       },
+      {
+        path: '/updateCraft/:id',
+        element:<UpdateCraft/>,
+      }
+
     ],
   },
 ]);

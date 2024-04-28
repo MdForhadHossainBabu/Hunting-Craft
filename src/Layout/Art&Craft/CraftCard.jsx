@@ -3,16 +3,10 @@ import { IoStarHalfOutline } from 'react-icons/io5';
 
 
 const CraftCard = ({ craft }) => {
+  
  
  const {_id,
    craftName,
-   quantity,
-   price,
-   description,
-   processingTime,
-   stockStatus,
-   userName,
-  email,
    rating,
    photo,
  } = craft;

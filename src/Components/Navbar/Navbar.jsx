@@ -6,12 +6,12 @@ import { HiXMark } from 'react-icons/hi2';
 import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
 
 
-
 const Navbar = () => {
 
-  const { profile, logOut, user } = useContext(AuthContext);
-  console.log(user);
+  const { profile, logOut, user,  } = useContext(AuthContext);
+  // console.log('this is ', user);
   // console.log(profile);
+
 
  const navLinks = (
    <div className="flex items-center gap-4">
@@ -61,7 +61,8 @@ const Navbar = () => {
  // handleToggle button useEffect 
  useEffect(() => {
   localStorage.setItem('theme', theme);
-  const localTheme = localStorage.getItem('theme');
+   const localTheme = localStorage.getItem('theme');
+  //  console.log(localTheme);
   document.querySelector('html').setAttribute('data-theme', localTheme)
  },[theme])
 
@@ -69,7 +70,7 @@ const Navbar = () => {
  const handleToggle = e => {
   if (e.target.checked) {
   setTheme('dark')
-  } else {
+  }  else {
    setTheme('light')
  }
  }

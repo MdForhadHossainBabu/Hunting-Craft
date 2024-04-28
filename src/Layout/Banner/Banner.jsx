@@ -13,6 +13,7 @@ import 'swiper/css/pagination';
 
 // import required modules
 import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
+import CraftItem from '../CraftItem/CraftItem';
 
 
 const Banner = () => {
@@ -21,7 +22,7 @@ const Banner = () => {
       <Swiper
         effect={'coverflow'}
         autoplay={{
-          delay: 2500,
+          delay: 1500,
           disableOnInteraction: false,
         }}
         grabCursor={true}
@@ -39,7 +40,7 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="h-[42rem] max-w-8xl mx-12 my-3 bg-rose-20">
+          <div className="h-[42rem] lg:max-w-8xl lg:mx-12 my-3 bg-rose-20">
             <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 bg-red-100">
               <div
                 className="col-span-2  my-32 px-24 py-12 space-y-8
@@ -51,14 +52,14 @@ const Banner = () => {
                   </span>{' '}
                   Top Art & Craft
                 </h1>
-                <h1 className="text-5xl font-extrabold font-display my-2">
+                <h1 className="lg:text-5xl text-3xl font-extrabold font-display my-2">
                   Easy Art & Craft for <br />
                   Beginners work
                 </h1>
                 <p className="text-rose-600 font-medium font-displayRoboto">
                   Stay Ahead and go again far from distributed
                 </p>
-                <button className="border-2 px-12 py-2 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
+                <button className="border-2 lg:px-12 px-8 lg:py-2 py-1 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
                   {' '}
                   <span className=" text-xl rounded-full text-white">
                     <MdOutlineDataExploration />
@@ -77,7 +78,7 @@ const Banner = () => {
           </div>{' '}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[42rem] max-w-8xl mx-12 my-3 bg-rose-20">
+          <div className="h-[42rem] lg:max-w-8xl lg:mx-12 my-3 bg-rose-20">
             <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 bg-red-100">
               <div
                 className="col-span-2  my-32 px-24 py-12 space-y-8
@@ -89,14 +90,14 @@ const Banner = () => {
                   </span>{' '}
                   Top Art & Craft
                 </h1>
-                <h1 className="text-5xl font-extrabold font-display my-2">
+                <h1 className="lg:text-5xl text-3xl font-extrabold font-display my-2">
                   Easy Art & Craft for <br />
                   Beginners work
                 </h1>
                 <p className="text-rose-600 font-medium font-displayRoboto">
                   Stay Ahead and go again far from distributed
                 </p>
-                <button className="border-2 px-12 py-2 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
+                <button className="border-2 lg:px-12 px-8 lg:py-2 py-1 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
                   {' '}
                   <span className=" text-xl rounded-full text-white">
                     <MdOutlineDataExploration />
@@ -115,7 +116,7 @@ const Banner = () => {
           </div>{' '}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[42rem] max-w-8xl mx-12 my-3 bg-rose-20">
+          <div className="h-[42rem] lg:max-w-8xl lg:mx-12 my-3 bg-rose-20">
             <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 bg-red-100">
               <div
                 className="col-span-2  my-32 px-24 py-12 space-y-8
@@ -127,14 +128,14 @@ const Banner = () => {
                   </span>{' '}
                   Top Art & Craft
                 </h1>
-                <h1 className="text-5xl font-extrabold font-display my-2">
+                <h1 className="lg:text-5xl text-3xl font-extrabold font-display my-2">
                   Easy Art & Craft for <br />
                   Beginners work
                 </h1>
                 <p className="text-rose-600 font-medium font-displayRoboto">
                   Stay Ahead and go again far from distributed
                 </p>
-                <button className="border-2 px-12 py-2 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
+                <button className="border-2 lg:px-12 px-8 lg:py-2 py-1 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
                   {' '}
                   <span className=" text-xl rounded-full text-white">
                     <MdOutlineDataExploration />
@@ -153,7 +154,7 @@ const Banner = () => {
           </div>{' '}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[42rem] max-w-8xl mx-12 my-3 bg-rose-20">
+          <div className="h-[42rem] lg:max-w-8xl lg:mx-12 my-3 bg-rose-20">
             <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 bg-red-100">
               <div
                 className="col-span-2  my-32 px-24 py-12 space-y-8
@@ -165,14 +166,14 @@ const Banner = () => {
                   </span>{' '}
                   Top Art & Craft
                 </h1>
-                <h1 className="text-5xl font-extrabold font-display my-2">
+                <h1 className="lg:text-5xl text-3xl font-extrabold font-display my-2">
                   Easy Art & Craft for <br />
                   Beginners work
                 </h1>
                 <p className="text-rose-600 font-medium font-displayRoboto">
                   Stay Ahead and go again far from distributed
                 </p>
-                <button className="border-2 px-12 py-2 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
+                <button className="border-2 lg:px-12 px-8 lg:py-2 py-1 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
                   {' '}
                   <span className=" text-xl rounded-full text-white">
                     <MdOutlineDataExploration />
@@ -191,7 +192,7 @@ const Banner = () => {
           </div>{' '}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[42rem] max-w-8xl mx-12 my-3 bg-rose-20">
+          <div className="h-[42rem] lg:max-w-8xl lg:mx-12 my-3 bg-rose-20">
             <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 bg-red-100">
               <div
                 className="col-span-2  my-32 px-24 py-12 space-y-8
@@ -203,14 +204,14 @@ const Banner = () => {
                   </span>{' '}
                   Top Art & Craft
                 </h1>
-                <h1 className="text-5xl font-extrabold font-display my-2">
+                <h1 className="lg:text-5xl text-3xl font-extrabold font-display my-2">
                   Easy Art & Craft for <br />
                   Beginners work
                 </h1>
                 <p className="text-rose-600 font-medium font-displayRoboto">
                   Stay Ahead and go again far from distributed
                 </p>
-                <button className="border-2 px-12 py-2 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
+                <button className="border-2 lg:px-12 px-8 lg:py-2 py-1 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
                   {' '}
                   <span className=" text-xl rounded-full text-white">
                     <MdOutlineDataExploration />
@@ -229,7 +230,7 @@ const Banner = () => {
           </div>{' '}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[42rem] max-w-8xl mx-12 my-3 bg-rose-20">
+          <div className="h-[42rem] lg:max-w-8xl lg:mx-12 my-3 bg-rose-20">
             <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 bg-red-100">
               <div
                 className="col-span-2  my-32 px-24 py-12 space-y-8
@@ -241,14 +242,14 @@ const Banner = () => {
                   </span>{' '}
                   Top Art & Craft
                 </h1>
-                <h1 className="text-5xl font-extrabold font-display my-2">
+                <h1 className="lg:text-5xl text-3xl font-extrabold font-display my-2">
                   Easy Art & Craft for <br />
                   Beginners work
                 </h1>
                 <p className="text-rose-600 font-medium font-displayRoboto">
                   Stay Ahead and go again far from distributed
                 </p>
-                <button className="border-2 px-12 py-2 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
+                <button className="border-2 lg:px-12 px-8 lg:py-2 py-1 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
                   {' '}
                   <span className=" text-xl rounded-full text-white">
                     <MdOutlineDataExploration />
@@ -267,7 +268,7 @@ const Banner = () => {
           </div>{' '}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[42rem] max-w-8xl mx-12 my-3 bg-rose-20">
+          <div className="h-[42rem] lg:max-w-8xl lg:mx-12 my-3 bg-rose-20">
             <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 bg-red-100">
               <div
                 className="col-span-2  my-32 px-24 py-12 space-y-8
@@ -279,14 +280,14 @@ const Banner = () => {
                   </span>{' '}
                   Top Art & Craft
                 </h1>
-                <h1 className="text-5xl font-extrabold font-display my-2">
+                <h1 className="lg:text-5xl text-3xl font-extrabold font-display my-2">
                   Easy Art & Craft for <br />
                   Beginners work
                 </h1>
                 <p className="text-rose-600 font-medium font-displayRoboto">
                   Stay Ahead and go again far from distributed
                 </p>
-                <button className="border-2 px-12 py-2 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
+                <button className="border-2 lg:px-12 px-8 lg:py-2 py-1 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
                   {' '}
                   <span className=" text-xl rounded-full text-white">
                     <MdOutlineDataExploration />
@@ -305,7 +306,7 @@ const Banner = () => {
           </div>{' '}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[42rem] max-w-8xl mx-12 my-3 bg-rose-20">
+          <div className="h-[42rem] lg:max-w-8xl lg:mx-12 my-3 bg-rose-20">
             <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 bg-red-100">
               <div
                 className="col-span-2  my-32 px-24 py-12 space-y-8
@@ -317,14 +318,14 @@ const Banner = () => {
                   </span>{' '}
                   Top Art & Craft
                 </h1>
-                <h1 className="text-5xl font-extrabold font-display my-2">
+                <h1 className="lg:text-5xl text-3xl font-extrabold font-display my-2">
                   Easy Art & Craft for <br />
                   Beginners work
                 </h1>
                 <p className="text-rose-600 font-medium font-displayRoboto">
                   Stay Ahead and go again far from distributed
                 </p>
-                <button className="border-2 px-12 py-2 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
+                <button className="border-2 lg:px-12 px-8 lg:py-2 py-1 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
                   {' '}
                   <span className=" text-xl rounded-full text-white">
                     <MdOutlineDataExploration />
@@ -343,7 +344,7 @@ const Banner = () => {
           </div>{' '}
         </SwiperSlide>
         <SwiperSlide>
-          <div className="h-[42rem] max-w-8xl mx-12 my-3 bg-rose-20">
+          <div className="h-[42rem] lg:max-w-8xl lg:mx-12 my-3 bg-rose-20">
             <div className="grid lg:grid-cols-4 md:grid-cols-1 grid-cols-1 bg-red-100">
               <div
                 className="col-span-2  my-32 px-24 py-12 space-y-8
@@ -355,14 +356,14 @@ const Banner = () => {
                   </span>{' '}
                   Top Art & Craft
                 </h1>
-                <h1 className="text-5xl font-extrabold font-display my-2">
+                <h1 className="lg:text-5xl text-3xl font-extrabold font-display my-2">
                   Easy Art & Craft for <br />
                   Beginners work
                 </h1>
                 <p className="text-rose-600 font-medium font-displayRoboto">
                   Stay Ahead and go again far from distributed
                 </p>
-                <button className="border-2 px-12 py-2 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
+                <button className="border-2 lg:px-12 px-8 lg:py-2 py-1 bg-rose-500 font-extrabold text-white font-displayRoboto flex items-center gap-4 rounded-md">
                   {' '}
                   <span className=" text-xl rounded-full text-white">
                     <MdOutlineDataExploration />
@@ -378,30 +379,12 @@ const Banner = () => {
                 />
               </div>
             </div>
-          </div>
+          </div>{' '}
         </SwiperSlide>
       </Swiper>
 
-      {/* <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide></SwiperSlide>
-      </Swiper> */}
-
       {/* add to craft item */}
+      <CraftItem />
     </>
   );
 };

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
 import { Navigate, useLocation } from "react-router-dom";
 import ClipLoader from 'react-spinners/ClipLoader';
-import AtomicSpinner from 'atomic-spinner';
+// import AtomicSpinner from 'atomic-spinner';
 
 
 
@@ -15,12 +15,12 @@ const ProtectedRoutes = ({ children }) => {
  if (loading) {
   return (
     <div className="flex items-center justify-center my-24">
-      {/* <ClipLoader
+      <ClipLoader
         size={150}
         aria-label="Loading Spinner"
         data-testid="loader"
-    /> */}
-    <AtomicSpinner/>
+    />
+    {/* <AtomicSpinner/> */}
     </div>
   );
  }

@@ -1,8 +1,8 @@
-import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
 const AddCraft = () => {
+
  const handleAddCraft = e => {
   e.preventDefault();
   const form = e.target;
@@ -30,28 +30,28 @@ const AddCraft = () => {
     photo,
   };
   // console.log(newCraft);
-  console.log(newCraft);
+  // console.log(newCraft);
 
   // send backend 
-  fetch('http://localhost:5000/craft', {
-   method: 'POST', 
-   headers: {
-    'content-type': 'application/json'
-   },
-   body:JSON.stringify(newCraft)
+  fetch('http://localhost:5000/craftItem', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(newCraft),
   })
-   .then(res => res.json())
-   .then(data => {
-    console.log(data);
-    if (data.insertedId) {
-     Swal.fire({
-       title: 'success',
-       text: 'Craft Added Successfully',
-       icon: 'success',
-       confirmButtonText: 'Cool',
-     });
-    }
-  })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      if (data.insertedId) {
+        Swal.fire({
+          title: 'success',
+          text: 'Craft Added Successfully',
+          icon: 'success',
+          confirmButtonText: 'Cool',
+        });
+      }
+    });
  
  }
  return (

@@ -9,7 +9,8 @@ import Swal from "sweetalert2";
 
 
 const Login = () => {
-  const { signInUser, googleLogin, githubLogin, setProfile } = useContext(AuthContext);
+  const { signInUser, googleLogin, githubLogin, setProfile, setProfileEmail } =
+    useContext(AuthContext);
   
   const [showPassword, setShowPassword] = useState(false);
 
@@ -31,7 +32,8 @@ const Login = () => {
        confirmButtonText: 'Cool',
      });
     //  toast.success(`${result.user.email} login successfully`)
-   console.log(result.user);
+     console.log(result.user);
+     setProfileEmail(result.user)
    })
    .catch(error => {
     console.log(error);
@@ -51,7 +53,8 @@ const Login = () => {
        confirmButtonText: 'Cool',
      });
     //  toast.success(`${result.user.email} login successfully with Google`)
-   console.log(result.user);
+     console.log(result.user);
+     setProfileEmail(result.user)
    })
    .catch(error => {
    console.log(error);
@@ -62,6 +65,7 @@ const Login = () => {
   githubLogin()
    .then(result => {
      setProfile(result.user);
+     setProfileEmail(result.user)
      Swal.fire({
        title: 'success',
        text: 'You are currently login',

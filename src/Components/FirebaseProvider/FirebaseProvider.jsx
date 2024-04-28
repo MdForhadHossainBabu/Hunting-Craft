@@ -9,7 +9,8 @@ const FirebaseProvider = ({ children }) => {
 
  const [user, setUser] = useState(null);
  const [loading, setLoading] = useState(true);
- const [profile, setProfile] = useState(null)
+  const [profile, setProfile] = useState(null);
+  const [profileEmail, setProfileEmail] = useState(null)
 
  // social auth provider 
  const googleProvider = new GoogleAuthProvider();
@@ -51,7 +52,8 @@ const FirebaseProvider = ({ children }) => {
  }
 
  // signOut
- const logOut = () => {
+  const logOut = () => {
+   setLoading(true)
    return signOut(auth);
  }
 
@@ -75,10 +77,11 @@ const FirebaseProvider = ({ children }) => {
    googleLogin,
   githubLogin,
   logOut,
-  user,
+   user,
+  setUser,
   loading,
   updateUserProfile,
-   profile, setProfile
+   profile, setProfile, profileEmail, setProfileEmail
  };
  return <AuthContext.Provider value={allValues}>
   {children}
