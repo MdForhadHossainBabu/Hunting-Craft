@@ -7,6 +7,7 @@ import FirebaseProvider from './Components/FirebaseProvider/FirebaseProvider.jsx
 import { Toaster } from 'react-hot-toast';
 import { Typewriter } from 'react-simple-typewriter';
 import { Tooltip } from 'react-tooltip';
+import { Fade } from 'react-awesome-reveal';
 
 
 
@@ -17,7 +18,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Toaster position="top-center" reverseOrder={false} />
         <RouterProvider router={router}>
           <Typewriter />
-          <Tooltip/>
+          <Tooltip />
+          <Fade/>
        </RouterProvider>
       </FirebaseProvider>
     </HelmetProvider>

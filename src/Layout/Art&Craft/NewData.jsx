@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import { IoStarHalfOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
@@ -5,7 +6,7 @@ const NewData = ({ craftData }) => {
 
  const { _id, craftName, rating, photo } = craftData;
  return (
-   <div>
+   <Fade>
      <div className="bg-gray-300 flex flex-col  h-96 w-full  px-7">
        <div className="flex items-center justify-center">
          <img className="w-[78rem] h-52 rounded-lg mt-5" src={photo} alt="" />
@@ -32,7 +33,7 @@ const NewData = ({ craftData }) => {
          </Link>
        </div>
      </div>
-   </div>
+   </Fade>
  );
 };
 

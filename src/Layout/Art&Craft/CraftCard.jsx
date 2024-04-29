@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { IoStarHalfOutline } from 'react-icons/io5';
+import { Fade } from "react-awesome-reveal";
 
 
 const CraftCard = ({ craft }) => {
@@ -12,8 +13,10 @@ const CraftCard = ({ craft }) => {
  } = craft;
  return (
    <>
+             <Fade cascade damping={0.1}>
      <div>
        <div className="bg-gray-300 flex flex-col  h-96 w-full  px-7">
+         
          <div className="flex items-center justify-center">
            <img className="w-[78rem] h-52 rounded-lg mt-5" src={photo} alt="" />
          </div>
@@ -37,6 +40,7 @@ const CraftCard = ({ craft }) => {
          </div>
        </div>
      </div>
+       </Fade>
    </>
  );
 };

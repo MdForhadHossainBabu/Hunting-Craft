@@ -16,7 +16,7 @@ const Navbar = () => {
   console.log(user?.photoURL);
 
  const navLinks = (
-   <div className="flex items-center gap-4">
+   <div className="flex items-center gap-4 ">
      <NavLink
        to="/"
        className={({ isActive }) =>
@@ -92,7 +92,7 @@ const Navbar = () => {
   }
 
  return (
-   <div className="lg:max-w-8xl  mx-auto lg:px-12 px-4 py-2 lg:py-3 shadow-xl fixed w-full z-20">
+   <div className="lg:max-w-8xl  mx-auto lg:px-12 px-4 py-2 lg:py-3 shadow-xl fixed w-full z-20 bg-slate-200">
      <div className="flex items-center justify-between">
        {/* Navbar Name & logo of heading */}
        <div className="font-displayRoboto ">

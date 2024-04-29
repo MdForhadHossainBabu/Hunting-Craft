@@ -53,6 +53,7 @@ setError("")
         // toast.success(`${result.user.email} register successfully`)
       // setProfile(result.user)
         console.log(result.user);
+        form.reset();
         
         // mongodb collection sign up
         const createdAt = result.user?.metadata?.creationTime;
@@ -184,7 +185,7 @@ setError("")
            />
            <div className="my-4 text-center">
              You have already an account ?{' '}
-             <Link to="/login" className="text-blue-600 font-bold">
+             <Link to="/login" className="text-blue-600 font-bold hover:font-extrabold hover:text-blue-700 hover:border-b-4 border-blue-600">
                Login
              </Link>
            </div>
