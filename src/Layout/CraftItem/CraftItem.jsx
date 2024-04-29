@@ -1,23 +1,22 @@
-import { useEffect, useState } from "react";
-import CraftItemDetails from "./CraftItemDetails";
-import { Typewriter } from "react-simple-typewriter";
-import { Fade } from "react-awesome-reveal";
+import { useEffect, useState } from 'react';
+import CraftItemDetails from './CraftItemDetails';
+import { Typewriter } from 'react-simple-typewriter';
+import { Fade } from 'react-awesome-reveal';
 
 const CraftItem = () => {
   // const { email } = profile;
-  
+
   const [craftData, setCraftData] = useState([]);
   const craftItemData = craftData.slice(0, 6);
   console.log(craftItemData);
   useEffect(() => {
-    fetch(`http://localhost:5000/craft`)
+    fetch(`https://assignment-10-server-nine-omega.vercel.app/craft`)
       .then(res => res.json())
       .then(data => {
         console.log(data.slice(0, 6));
-        setCraftData(data.slice(0, 6))
-    })
-},[])
-
+        setCraftData(data.slice(0, 6));
+      });
+  }, []);
 
   return (
     <div className="mt-12 space-y-4">
@@ -41,7 +40,7 @@ const CraftItem = () => {
           </span>
         </h2>
       </Fade>
-      <Fade duration={300} delay={200} direction="up"> 
+      <Fade duration={300} delay={200} direction="up">
         <p className="text-xl font-display text-center lg:px-52">
           Art and craft provide a platform for the artists for expressing their
           ideas and talents. <br />{' '}
