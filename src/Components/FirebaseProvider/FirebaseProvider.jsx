@@ -19,7 +19,6 @@ const FirebaseProvider = ({ children }) => {
  
  //create user with email & password
  const createUser = (email, password) => {
-  setLoading(true)
  return createUserWithEmailAndPassword(auth, email, password);
  }
 
@@ -53,7 +52,7 @@ const FirebaseProvider = ({ children }) => {
 
  // signOut
   const logOut = () => {
-   setLoading(true)
+    setLoading(true)
    return signOut(auth);
  }
 
@@ -61,10 +60,10 @@ const FirebaseProvider = ({ children }) => {
  // observer
  useEffect(() => {
   const unSubscribe =  onAuthStateChanged(auth, user => {
-   if (user) {
+
     setUser(user);
     setLoading(false)
-    }
+
   })
   return () => unSubscribe();
  },[])

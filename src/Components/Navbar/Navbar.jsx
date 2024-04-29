@@ -4,14 +4,16 @@ import { Link, NavLink } from "react-router-dom";
 import { IoIosMenu } from 'react-icons/io';
 import { HiXMark } from 'react-icons/hi2';
 import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
-
+import toast from "react-hot-toast";
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
 
-  const { profile, logOut, user,  } = useContext(AuthContext);
+  const {  logOut, user,  } = useContext(AuthContext);
   // console.log('this is ', user);
   // console.log(profile);
-
+  console.log(user?.photoURL);
 
  const navLinks = (
    <div className="flex items-center gap-4">
@@ -80,7 +82,9 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
       .then(result => {
-      console.log(result);
+        console.log(result);
+        
+        toast.success('Logout Successfully')
       })
       .catch(error => {
       console.log(error);
@@ -92,9 +96,9 @@ const Navbar = () => {
      <div className="flex items-center justify-between">
        {/* Navbar Name & logo of heading */}
        <div className="font-displayRoboto ">
-         <h2 className="text-3xl font-extrabold text-rose-400">
-           Art <span className="text-blue-600">&</span>
-           <span className="text-green-500"> Craft</span>
+         <h2 className="text-3xl font-extrabold text-rose-600">
+           Hunting
+           <span className="text-amber-500"> Craft</span>
          </h2>
        </div>
        {/* Navbar items & menu */}
@@ -112,11 +116,21 @@ const Navbar = () => {
          <div className="flex items-center gap-3 font-display font-medium">
            {user ? (
              <h2>
-               <button onClick={handleLogOut}>Log Out</button>
+               <button
+                 className="border-b-4  font-display hover:font-extrabold text-red-600   border-rose-600 "
+                 onClick={handleLogOut}
+               >
+                 Log Out
+               </button>
              </h2>
            ) : (
              <h2>
-               <Link to="/login">login</Link>
+               <Link
+                 className="border-b-4 border-rose-600 font-display font-bold"
+                 to="/login"
+               >
+                 login
+               </Link>
              </h2>
            )}
            <div></div>
@@ -125,8 +139,7 @@ const Navbar = () => {
            <div className="flex items-center justify-center">
              <label className="swap swap-rotate">
                {/* this hidden checkbox controls the state */}
-               <input
-               onChange={handleToggle}  type="checkbox" />
+               <input onChange={handleToggle} type="checkbox" />
 
                {/* sun icon */}
                <svg
@@ -148,71 +161,76 @@ const Navbar = () => {
              </label>
            </div>
            {/* conditionally profile update to this way */}
-           <div>
-             {profile && (
-               <img
-                 className="w-12 rounded-full h-12"
-                 src={user?.photoURL}
-                 alt=""
-               />
-             )}
-           </div>
+
+     
+             <div>
+               {user && (
+                 <img
+                   className="w-12 rounded-full h-12"
+                   src={user?.photoURL}
+                   alt=""
+                 />
+               )}
+             </div>
+      
 
            <div
              onClick={() => setOpen(!open)}
-             className="text-3xl flex md:hidden lg:hidden relative border-4 bg-rose-600 text-white"
+             className="text-3xl flex md:hidden lg:hidden  "
            >
-             {open ? <HiXMark /> : <IoIosMenu />}
-             {/* <IoIosMenu /> */}
+             <span className="relative border-4 bg-rose-600 text-white">
+               {open ? <HiXMark /> : <IoIosMenu />}
+               {/* <IoIosMenu /> */}
 
-             <ul
-               className={`absolute duration-1000
+               <ul
+                 className={`absolute duration-1000
              ${open ? 'top-16' : '!-top-96'}
              right-[2rem] top-10`}
-             >
-               <div className="flex flex-col gap-6 bg-blue-300 px-4 py-4">
-                 <NavLink
-                   to="/"
-                   className={({ isActive }) =>
-                     isActive
-                       ? 'border-2 border-green-600 text-blue-600  font-medium lg:px-5 px-24  text-sm'
-                       : 'border-2 border-green-600 px-24  text-sm'
-                   }
-                 >
-                   Home
-                 </NavLink>
-                 <NavLink
-                   to="/art&craft"
-                   className={({ isActive }) =>
-                     isActive
-                       ? 'border-2 border-green-600 text-blue-600  font-medium lg:px-5 px-24  text-sm'
-                       : 'border-2 border-green-600 px-24  text-sm'
-                   }
-                 >
-                   All Art & craft
-                 </NavLink>
-                 <NavLink
-                   to="/addCraft"
-                   className={({ isActive }) =>
-                     isActive
-                       ? 'border-2 border-green-600 text-blue-600  font-medium lg:px-5 px-24  text-sm'
-                       : 'border-2 border-green-600 px-24  text-sm'
-                   }
-                 >
-                   Add Craft
-                 </NavLink>
-                 <NavLink
-                   to="/myCraftList"
-                   className={({ isActive }) =>
-                     isActive
-                       ? 'border-2 border-green-600 text-blue-600  font-medium lg:px-5 px-24  text-sm'
-                       : 'border-2 border-green-600 px-24  text-sm'
-                   }
-                 >
-                   My Art&Craft List
-                 </NavLink>
-               </div>
-             </ul>
+               >
+                 <div className="flex flex-col gap-6 bg-slate-400 px-4 py-4">
+                   <NavLink
+                     to="/"
+                     className={({ isActive }) =>
+                       isActive
+                         ? 'border-2 border-rose-600 rounded-lg text-rose text-medium px-24  text-center  text-sm py-2 font-extrabold'
+                         : 'border-2 border-green-600 px-24  text-sm py-2 rounded-lg'
+                     }
+                   >
+                     Home
+                   </NavLink>
+                   <NavLink
+                     to="/art&craft"
+                     className={({ isActive }) =>
+                       isActive
+                         ? 'border-2 border-rose-600 rounded-lg text-rose-600  lg:px-5 text-center text-lg py-2 font-extrabold'
+                         : 'border-2 border-green-600 text-center py-2 rounded-lg  text-sm'
+                     }
+                   >
+                     All Art & craft
+                   </NavLink>
+                   <NavLink
+                     to="/addCraft"
+                     className={({ isActive }) =>
+                       isActive
+                         ? 'border-2 border-rose-600 rounded-lg text-rose-medium lg:px-5 text-center text-lg-2  text-sm font-extrabold py-2'
+                         : 'border-2 border-green-600 text-center  text-sm py-2 rounded-lg'
+                     }
+                   >
+                     Add Craft
+                   </NavLink>
+                   <NavLink
+                     to="/myCraftList"
+                     className={({ isActive }) =>
+                       isActive
+                         ? 'border-2 border-rose-600 rounded-lg  lg:px-5 text-center text-sm py-2 font-extrabold'
+                         : 'border-2 border-green-600 text-center py-2  text-sm rounded-lg'
+                     }
+                   >
+                     My Art&Craft List
+                   </NavLink>
+                 </div>
+               </ul>
+             </span>
            </div>
          </div>
        </div>

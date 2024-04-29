@@ -25,13 +25,13 @@ const Login = () => {
   signInUser(email, password)
    .then(result => {
      setProfile(result.user)
-     Swal.fire({
-       title: 'success',
-       text: 'You are currently login',
-       icon: 'success',
-       confirmButtonText: 'Cool',
-     });
-    //  toast.success(`${result.user.email} login successfully`)
+    //  Swal.fire({
+    //    title: 'success',
+    //    text: 'You are currently login',
+    //    icon: 'success',
+    //    confirmButtonText: 'Cool',
+    //  });
+     toast.success(`${result.user.email} login successfully`)
      console.log(result.user);
      setProfileEmail(result.user)
    })
@@ -46,13 +46,13 @@ const Login = () => {
   googleLogin()
    .then(result => {
      setProfile(result.user)
-     Swal.fire({
-       title: 'success',
-       text: 'You are currently login',
-       icon: 'success',
-       confirmButtonText: 'Cool',
-     });
-    //  toast.success(`${result.user.email} login successfully with Google`)
+    //  Swal.fire({
+    //    title: 'success',
+    //    text: 'You are currently login',
+    //    icon: 'success',
+    //    confirmButtonText: 'Cool',
+    //  });
+     toast.success(`${result.user.email} login successfully with Google`)
      console.log(result.user);
      setProfileEmail(result.user)
    })
@@ -66,13 +66,13 @@ const Login = () => {
    .then(result => {
      setProfile(result.user);
      setProfileEmail(result.user)
-     Swal.fire({
-       title: 'success',
-       text: 'You are currently login',
-       icon: 'success',
-       confirmButtonText: 'Cool',
-     });
-    //  toast.success(`${result.user.displayName} login successfully with GitHub`)
+    //  Swal.fire({
+    //    title: 'success',
+    //    text: 'You are currently login',
+    //    icon: 'success',
+    //    confirmButtonText: 'Cool',
+    //  });
+     toast.success(`${result.user.displayName} login successfully with GitHub`)
     console.log(result.user);
    })
    .catch(error => {
@@ -144,7 +144,7 @@ const Login = () => {
          </div>
          <div className="font-display my-4">
            <h2>
-             Dont have account ? <Link
+             Don't have account ? <Link
                className="font-medium text-blue-500 font-display hover:underline hover:duration-300 hover:text-blue-600 hover:font-extrabold"
                to="/register"
              >

@@ -4,7 +4,7 @@ const Footer = () => {
      <div className="flex items-center gap-12">
        <div>
          <h1 className="text-4xl font-extrabold font-displayRoboto text-rose-600">
-           Art <span className="text-blue-600">&</span> <span className="text-green-600">Craft</span>
+           Hunting <span className="text-amber-500">Craft</span>
          </h1>
        </div>
        <div className="flex flex-col gap-5">

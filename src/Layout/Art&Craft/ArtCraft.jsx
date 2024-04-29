@@ -22,7 +22,12 @@ const ArtCraft = () => {
      <Helmet>
        <title>Art & Craft || All Art & Craft </title>
      </Helmet>
-
+     <div className="my-8">
+       <h2 className="text-4xl text-center font-bold font-display">
+         All Craft Item
+       </h2>
+       
+</div>
      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-8xl mx-12 gap-6">
        {crafts.map(craft => (
          <CraftCard key={craft._id} craft={craft}></CraftCard>

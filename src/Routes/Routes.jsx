@@ -10,6 +10,7 @@ import Login from "../Components/Login/Login";
 import ProtectedRoutes from "../Components/ProtectedRoutes/ProtectedRoutes";
 import Details from "../Layout/Art&Craft/Details";
 import UpdateCraft from "../Layout/MyArtCraftList/UpdateCraft";
+import CraftItemDetailsUpdate from "../Layout/MyArtCraftList/CraftItemDetailsUpdate";
 
 export const router = createBrowserRouter([
   {
@@ -68,6 +69,12 @@ export const router = createBrowserRouter([
       {
         path: '/updateCraft/:id',
         element: <UpdateCraft />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/craftItem/${params.id}`),
+      },
+      {
+        path: '/craftItem/:id',
+        element: <CraftItemDetailsUpdate />,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/craftItem/${params.id}`),
       },

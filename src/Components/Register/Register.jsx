@@ -51,7 +51,7 @@ setError("")
     updateUserProfile(name, photo)
       .then(() => {
         // toast.success(`${result.user.email} register successfully`)
-      setProfile(result.user)
+      // setProfile(result.user)
         console.log(result.user);
         
         // mongodb collection sign up
@@ -183,7 +183,7 @@ setError("")
              value="Register"
            />
            <div className="my-4 text-center">
-             You have already account ?{' '}
+             You have already an account ?{' '}
              <Link to="/login" className="text-blue-600 font-bold">
                Login
              </Link>

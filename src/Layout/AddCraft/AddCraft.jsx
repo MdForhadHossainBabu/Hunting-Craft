@@ -11,7 +11,8 @@ const AddCraft = () => {
   const price = form.price.value;
   const description = form.description.value;
   const processingTime = form.processing_time.value;
-  const stockStatus = form.stock_status.value;
+   const stockIn = form.instock.value;
+   const stockOut = form.outstock.value;
   const userName = form.userName.value;
   const email = form.email.value;
    const photo = form.photo.value;
@@ -25,7 +26,7 @@ const AddCraft = () => {
     price,
     description,
     processingTime,
-    stockStatus,
+    stockIn,stockOut,
     userName,
     email,
     photo,
@@ -57,7 +58,7 @@ const AddCraft = () => {
  
  }
  return (
-   <div className="my-12 mx-12 border-4 py-4 space-y-4 px-12">
+   <div className="my-12 mx-12 border-4 py-4 space-y-4 px-12 font-display font-medium">
      <Helmet>
        <title>Art Craft || Add Craft Item</title>
      </Helmet>
@@ -165,17 +166,17 @@ const AddCraft = () => {
            </label>
          </div>
          <div className="from-control md:w-1/2">
-           <label className="label">
-             <span className="label-text">Stock Status : </span>
-           </label>
-           <label className="input-group">
-             <input
-               type="text"
-               name="stock_status"
-               placeholder="Stock_Status"
-               className="input input-bordered md:w-full"
-             />
-           </label>
+           <div className="flex flex-col border-2 mt-3 rounded-lg">
+             <p className="font-display font-bold mx-3">Stock Status</p>
+             <span className="flex items-center gap-2 mx-4 font-display font-medium">
+               <input type="radio" name="instock" id="" />
+               <p>In Stock </p>
+             </span>
+             <span className="flex items-center gap-2 mx-4 font-medium font-display">
+               <input type="radio" name="outstock" id="" />
+               <p>Stock Out</p>
+             </span>
+           </div>
          </div>
        </div>
        {/* form category & details row */}
@@ -195,7 +196,7 @@ const AddCraft = () => {
          </div>
          <div className="from-control md:w-1/2">
            <label className="label">
-             <span className="label-text">Email  : </span>
+             <span className="label-text">Email : </span>
            </label>
            <label className="input-group">
              <input
@@ -224,11 +225,22 @@ const AddCraft = () => {
            </label>
          </div>
        </div>
+       <div className="border-2 py-3 my-4 px-4 rounded-lg">
+         <h1 className="tex-2xl font-display font-extrabold text- xl my-1">Customization</h1>
+         <div className="flex items-center gap-2 font-display">
+           <input type="radio" name="Yes" id=" " />
+           Yes
+         </div>
+         <div className="flex items-center gap-2 font-display">
+           <input type="radio" name="Yes" id=" " />
+           No
+         </div>
+       </div>
        <div className="mt-6">
          <input
            type="submit"
            value="Add Craft"
-           className="btn btn-block bg-black text-white"
+           className="btn btn-block bg-rose-500 font-extrabold text-xl  hover:bg-rose-500 hover:text-white text-white"
          />
        </div>
      </form>

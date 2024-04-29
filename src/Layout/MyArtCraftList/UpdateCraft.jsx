@@ -219,12 +219,13 @@ const UpdateCraft = () => {
              <span className="label-text">Email : </span>
            </label>
            <label className="input-group">
-             <input
+             <input 
                type="email"
+               disabled
                defaultValue={email}
                name="email"
                placeholder="Email"
-               className="input input-bordered md:w-full"
+               className="input input-bordered md:w-full text-black font-display font-bold text-lg bg-black"
              />
            </label>
          </div>

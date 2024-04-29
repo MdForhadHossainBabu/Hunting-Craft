@@ -8,6 +8,7 @@ const SingleCartInfo = ({ cartInfo, setMyCart, myCart }) => {
   // console.log(cartInfo);
  
   const { _id, craftName, rating, photo } = cartInfo;
+  console.log(cartInfo);
 
   const handleDelete = id => {
     Swal.fire({
@@ -70,7 +71,7 @@ const SingleCartInfo = ({ cartInfo, setMyCart, myCart }) => {
         </div>
         <div className="flex items-center justify-center my-6">
           <Link
-            to={`/craft/${_id}`}
+            to={`/craftItem/${_id}`}
             className=" rounded-md hover:scale-105 duration-500 px-28 py-1 font-extrabold font-display bg-rose-500 text-white"
           >
             Details

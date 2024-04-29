@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CraftItemDetails from "./CraftItemDetails";
+import { Typewriter } from "react-simple-typewriter";
 
 const CraftItem = () => {
   // const { email } = profile;
@@ -19,11 +20,38 @@ const CraftItem = () => {
 
   return (
     <div className="mt-12 space-y-4">
-      <h2 className="text-5xl font-bold font-display text-center">Crafts </h2>
+      <h2
+        style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}
+        className="text-5xl font-bold font-display text-center"
+      >
+        Crafts
+        <span className="text-rose-500" style={{ padding: '1rem' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['Hunting', 'Cart']}
+            loop={false}
+            cursor
+            cursorStyle="."
+            typeSpeed={70}
+            deleteSpeed={5}
+            delaySpeed={1000}
+          />
+        </span>
+      </h2>
       <p className="text-xl font-display text-center lg:px-52">
         Art and craft provide a platform for the artists for expressing their
-        ideas and talents. We generally write or speak to others if we want to
-        convey any message or talk about something.
+        ideas and talents. <br /> <span className="text-rose-500">
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={[ ' We generally write or speak to others if we want to   convey any message or talk about something.   ','We generally write or speak to others if we want to convey any message or talk about something.']}
+            loop={false}
+            cursor
+            cursorStyle="."
+            typeSpeed={20}
+            deleteSpeed={5}
+            delaySpeed={1000}
+          />
+        </span>
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-8xl mx-auto px-12 gap-6">
         {craftData.map((craftItemData, indx) => (
